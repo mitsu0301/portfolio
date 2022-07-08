@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+  
+*::after, *::before {
+    box-sizing: inherit;
+}
+/*#FFC5B9 #FF7C65 #5F88B3 #F6FFAD*/
+
+
+h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 42px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+
+/*hero*/
+#hero {
+    height: 100vh;
+    background-color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 80px;
+}
+
+
+/*about*/
+#about {
+    margin-top: 200px;
+    height: 700px;
+    background-color: #FFC5B9;
+    position: relative;
+}
+#about > div {
+    padding: 0 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#about .text_container {
+    height: 400px;
+    width: 400px;
+    background-color: #ffffff;
+}
+#about img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/*works*/
+#works {
+    margin-top: 200px;
+    height: 3000px;
+    background-color: #FFC5B9;
+    position: relative;
+    padding: 250px 0;
+}
+#works li{
+    margin-bottom: 100px;
+    background-image: url(/img/test.png);
+    background-size: cover;
+    height: 400px;
+    padding-top: 200px;
+    margin-right: 40%;
+    list-style: none;
+}
+#works li div{
+    height: 150px;
+    width: 80%;
+    background-color: #ffffff82;
+    padding: 30px;
+}
+#works li a {
+    font-family: 'Caveat', cursive;
+    font-size: 42px;
+    text-decoration: none;
+}
+#works ul {
+    display: flex;
+    flex-direction: column;
+}
+#works li:nth-child(2n+1) {
+    margin-right: 0;
+    margin-left: 40%;
+}
+#works li:nth-child(2n+1) div {
+    margin-left: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/*footer*/
+footer {
+    height: 100px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+footer div {
+    box-sizing: border-box;
+    border-top: 1px #000 solid;
+    height: 100%;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

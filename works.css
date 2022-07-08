@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+*::after, *::before {
+    box-sizing: inherit;
+}
+
+
+header {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 42px;
+}
+
+section {
+    background-color: #FFC5B9;
+}
+
+/*footer*/
+footer {
+    height: 100px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+footer div {
+    box-sizing: border-box;
+    border-top: 1px #000 solid;
+    height: 100%;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
