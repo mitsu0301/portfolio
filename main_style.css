@@ -71,7 +71,7 @@ h1 {
 }
 #works li{
     margin-bottom: 100px;
-    background-image: url(./img/test.png);
+    background-image: url("./img/test.png");
     background-size: cover;
     height: 400px;
     padding-top: 200px;
