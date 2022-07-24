@@ -3,7 +3,7 @@
 const Top = document.getElementById("hero");
 const l = document.getElementById("sc-to-left");
 const r = document.getElementById("sc-to-right");
-const imgName = ["url(./img/hero1.jpg)","url(./img/hero2.jpg)","url(./img/hero3.jpg)","url(./img/hero4.jpg)"];
+const imgName = ["url(./img/hero1.jpg)","url(./img/hero2.JPG)","url(./img/hero3.jpg)","url(./img/hero4.JPG)"];
 let count = -1;
 
 imgChange();
