@@ -74,6 +74,9 @@
     font-family: 'Caveat', cursive;
     color: #fff;
 }
+.menu-content ul a:hover {
+    color: #FFC5B9;
+}
 .menu-content .top{
     display: flex;
     flex-direction: column;

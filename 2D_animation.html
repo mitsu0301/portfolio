@@ -14,6 +14,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
     </style>
     <link rel="stylesheet" href="works.css">
+    <link rel="stylesheet" href="2D_animation.css">
 </head>
 <body>
     <header>
@@ -54,28 +55,58 @@
     <main>
         <section>
             <div>
-                <video src=""></video>
-                <p>説明、使用ツール、制作期間などの説明が入る。説明、使用ツール、制作期間などの説明が入る。説明、使用ツール、制作期間などの説明が入る。説明、使用ツール、制作期間などの説明が入る。</p>
+                <video src="./img/2Danime.mp4" webkit-playsinline playsinline muted controls poster="./img/2Danime_thumbnail.jpg">
+                    <source src="./img/2Danime.mp4" type="video/mp4">
+                    <p>動画を再生できません。</p>
+                </video>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>テーマ</th><td>大塚愛さんの楽曲、「ネコに風船」をイメージした<br>アニメーションを制作</td>
+                        </tr>
+                        <tr>
+                            <th>使用アプリケーション</th><td>ibisPaintX、iMovie、Audacity</td>
+                        </tr>
+                        <tr>
+                            <th>制作時期</th><td>2021年 6~7月</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>※著作権の都合上、音声は消してあります。</p>
             </div>
             <ul>
-                <li>
+                <li class="econte">
                     <h2>企画書・絵コンテ作成</h2>
-                    <img src="" alt="econte">
+                    <img src="./img/2Danime_img1.jpg" alt="econte">
+                    <div class="arrow_container">
+                        <div class="arrow"></div>
+                    </div>
                 </li>
-                <li>
+                <li class="illust">
                     <h2>イラスト制作</h2>
-                    <img src="" alt="illust1">
-                    <img src="" alt="illust2">
-                    <img src="" alt="illust3">
-                    <img src="" alt="illust4">
+                    <div class="illust_container">
+                        <img src="./img/2Danime_img1.PNG" alt="illust1">
+                        <img src="./img/2Danime_img2.PNG" alt="illust2">
+                        <img src="./img/2Danime_img3.PNG" alt="illust3">
+                        <img src="./img/2Danime_img4.PNG" alt="illust4">
+                    </div>
+                    <div class="arrow_container">
+                        <div class="arrow"></div>
+                    </div>
                 </li>
-                <li>
+                <li class="anime">
                     <h2>アニメーション化</h2>
-                    <video src=""></video>
+                    <video src="./img/2Danime_movie.mp4" webkit-playsinline playsinline muted autoplay loop>
+                        <source src="./img/2Danime.mp4" type="video/mp4">
+                        <p>動画を再生できません。</p>
+                    </video>
+                    <div class="arrow_container">
+                        <div class="arrow"></div>
+                    </div>
                 </li>
-                <li>
+                <li class="imovie">
                     <h2>動画編集</h2>
-                    <img src="" alt="imovie">
+                    <img src="./img/2Danime_img2.jpg" alt="imovie">
                 </li>
             </ul>
         </section>

@@ -8,56 +8,222 @@
 *::after, *::before {
     box-sizing: inherit;
 }
-/*#FFC5B9 #FF7C65 #5F88B3 #F6FFAD*/
 
 
 h2 {
     font-family: 'Caveat', cursive;
     font-size: 42px;
     position: absolute;
-    top: 50px;
+    top: 60px;
     left: 100px;
+    z-index: 1;
+}
+.w_circle {
+    height: 140px;
+    width: 140px;
+    background-color: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    left: 80px;
+}
+.b_circle {
+    height: 90px;
+    width: 90px;
+    background-color: #5F88B3;
+    position: absolute;
+    border-radius: 50%;
+    top: 80px;
+    left: 190px;
 }
 
 
 /*hero*/
 #hero {
     height: 100vh;
-    background-color: #999;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    background-size: cover;
+    transition: 0.5s;
+}
+#hero::after {
+    content: '';
+    background: radial-gradient( #ffffffc0,#ffffff80, #FFC5B980);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+#hero #sc-to-left {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-right: 30px solid #fff;
+    border-bottom: 30px solid transparent;
+    position: absolute;
+    left: 10px;
+    z-index: 1;
+}
+#hero #sc-to-right {
+    width: 0;
+    height: 0;
+    border-left: 30px solid #fff;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
 }
 h1 {
     font-family: 'Caveat', cursive;
     font-size: 80px;
+    z-index: 1;
+    position: relative;
+    color: #fff;
+}
+h1::after {
+    content: "Portfolio";
+    font-family: 'Caveat', cursive;
+    font-size: 80px;
+    z-index: 1;
+    position: absolute;
+    color: #5F88B3;
+    left: 5px;
 }
 
 
-/*about*/
-#about {
+/*profile*/
+#profile {
     margin-top: 200px;
     height: 700px;
     background-color: #FFC5B9;
     position: relative;
 }
-#about > div {
+#profile .contents {
     padding: 0 150px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-#about .text_container {
+#profile .text_container {
     height: 400px;
     width: 400px;
-    background-color: #ffffff;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
 }
-#about img {
-    height: 250px;
-    width: 250px;
+#profile img {
+    height: 300px;
+    width: 300px;
     border-radius: 50%;
     object-fit: cover;
+}
+.about_btn,.skills_btn {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    z-index: 10;
+    transition: 0.2s;
+}
+.about_btn {
+    background-color: #ffffff;
+    color: #5F88B3;
+    border-radius: 0 0 100% 0;
+}
+.about_btn p {
+    left: 10px;
+    top: 20px;
+    position: absolute;
+}
+.skills_btn {
+    background-color: #5F88B3;
+    color: #ffffff;
+    bottom: 0;
+    right: 0;
+    border-radius: 100% 0 0 0;
+    padding: 20px 0 0 20px;
+}
+.skills_btn p {
+    right: 10px;
+    bottom: 20px;
+    position: absolute;
+}
+.about_btn:hover,.skills_btn:hover {
+    height: 100px;
+    width: 100px;
+}
+.about,.skills {
+    height: 565px;
+    width: 565px;
+    position: absolute;
+}
+.about {
+    background-color: #ffffff;
+    border-radius: 0 0 100% 0;
+    z-index: 1;
+}
+.about table {
+    margin: 70px 235px 235px 70px;
+    font-size: 13px;
+}
+.skills {
+    background-color: #5F88B3;
+    color: #fff;
+    right: 0;
+    bottom: 0;
+    border-radius: 100% 0 0 0;
+}
+.skills table {
+    margin: 235px 70px 70px 235px;
+    font-size: 13px;
+}
+table th {
+    width: 60px;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 14px;
+}
+table tr {
+    box-sizing: border-box;
+    display: block;
+}
+.about tr {
+    border-top: 1px solid #5F88B3;
+}
+.skills tr {
+    border-top: 1px solid #fff;
+}
+tr:first-child {
+    border-top: none;
+}
+
+.active {
+    z-index: 1;
+    animation: BigCircle 0.3s linear;
+    animation-fill-mode: both;
+}
+@keyframes BigCircle{
+    0%{
+        height: 0;
+        width: 0;
+        color: #00000000;
+    }
+    99%{
+        color: #00000000;
+    }
+    100%{
+        height: 565px;
+        width: 565px;
+    }
 }
 
 
@@ -71,27 +237,52 @@ h1 {
 }
 #works li{
     margin-bottom: 100px;
-    background-image: url("./img/test.png");
     background-size: cover;
+    background-position: center center;
     height: 400px;
     padding-top: 200px;
     margin-right: 40%;
     list-style: none;
+    position: relative;
+    pointer-events: none;
+    opacity: 0;
+}
+#works li::after {
+    content: '';
+    background-color: #5F88B360;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
 }
 #works li div{
     height: 150px;
     width: 80%;
-    background-color: #ffffff82;
+    background-color: #ffffffaa;
     padding: 30px;
+    position: absolute;
+    z-index: 1;
 }
 #works li a {
     font-family: 'Caveat', cursive;
     font-size: 42px;
     text-decoration: none;
+    color: #000;
+    pointer-events: auto;
+    transition: 0.5s;
+}
+#works li a:hover {
+    font-size: 44px;
+}
+#works li:hover::after {
+    background-color: #00000000;
 }
 #works ul {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 #works li:nth-child(2n+1) {
     margin-right: 0;
@@ -101,6 +292,49 @@ h1 {
     margin-left: 20%;
     display: flex;
     justify-content: flex-end;
+}
+#works #logo {
+    background-image: url(./img/logo1.jpg);
+}
+#works #poster {
+    background-image: url(./img/kahou.jpg);
+}
+#works #sketch {
+    background-image: url(./img/sketch1.jpg);
+}
+#works #anime {
+    background-image: url(./img/2Danime_thumbnail.jpg);
+}
+#works #CG {
+    background-image: url(./img/3DCG.png);
+}
+#works li:nth-child(2n+1).inview{
+    animation: InFromRight 0.5s linear;
+    animation-fill-mode: both;
+}
+#works li:nth-child(2n).inview{
+    animation: InFromLeft 0.5s linear;
+    animation-fill-mode: both;
+}
+@keyframes InFromRight{
+    0%{
+        left: 60%;
+        opacity: 1;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+@keyframes InFromLeft{
+    0%{
+        right: 60%;
+        opacity: 1;
+    }
+    100%{
+        right: 0;
+        opacity: 1;
+    }
 }
 
 
@@ -120,4 +354,3 @@ footer div {
     justify-content: center;
     align-items: center;
 }
-

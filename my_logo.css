@@ -12,8 +12,20 @@ section > img {
     object-fit: cover;
 }
 
-section p {
+section table {
     margin-bottom: 200px;
+    border-collapse: separate;
+    border-spacing: 14px;
+}
+section tr {
+    display: block;
+    border-top: 2px #fff solid;
+}
+section tr:first-child {
+    border-top: none;
+}
+section th {
+    width: 200px;
 }
 
 section div {

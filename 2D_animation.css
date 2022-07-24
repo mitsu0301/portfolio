@@ -1,0 +1,141 @@
+section {
+    padding: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section > div{
+    height: 530px;
+    width: 80%;
+    background-color: #5F88B3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 300px;
+}
+
+section div video{
+    height: 350px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+section ul {
+    width: 80%;
+}
+
+section ul li {
+    display: flex;
+    height: 500px;
+    margin-bottom: 200px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    border: 5px dotted #fff;
+    position: relative;
+}
+
+section ul li h2 {
+    width: 100%;
+    text-align: center;
+}
+
+section .econte img {
+    /* height: 100%; */
+    width: 40%;
+    margin: 0 50px;
+}
+
+section .illust .illust_container {
+    width: 200%;
+    text-align: right;
+}
+
+section .illust img {
+    width: 45%;
+    height: 140px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+section .anime video {
+    width: 60%;
+}
+
+section .imovie img {
+    width: 60%;
+}
+
+section table {
+    border-collapse: separate;
+    border-spacing: 3px;
+}
+section  tr {
+    display: block;
+    border-top: 1px #fff solid;
+    font-size: 12px;
+    color: #fff;
+}
+section  tr:first-child {
+    border-top: none;
+}
+section  th {
+    width: 150px;
+}
+section > div p {
+    color: #fff;
+    font-size: 10px;
+    width: 100%;
+    text-align: right;
+}
+
+/*矢印*/
+.arrow_container {
+    transform: translate(-50%, -50%);
+    top: 570px;
+    left: 50%;
+    position: absolute;
+    animation: arrow_animation 2s linear;
+    animation-iteration-count: infinite;
+}
+
+.arrow {
+    border-bottom: solid 10px #fff;
+    border-right: solid 10px #fff;
+    width: 70px;
+    height: 70px;
+    transform: rotate(45deg);
+}
+
+.arrow::after {
+    content: '';
+    border-bottom: solid 10px #fff;
+    border-right: solid 10px #fff;
+    width: 70px;
+    height: 70px;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+}
+
+@keyframes arrow_animation{
+    0%{
+        opacity: 1;
+        top: 570px;
+    }
+    40%{
+        opacity: 0;
+        top: 590px;
+    }
+    60%{
+        opacity: 0;
+        top: 550px;
+    }
+    100%{
+        opacity: 1;
+        top: 570px;
+    }
+}

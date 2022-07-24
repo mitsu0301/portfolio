@@ -14,6 +14,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
     </style>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header>
@@ -53,42 +54,68 @@
     <main>
         <section id="hero">
             <h1>Portfolio</h1>
+            <div id="sc-to-left"></div>
+            <div id="sc-to-right"></div>
         </section>
     
-        <section id="about">
+        <section id="profile">
             <h2>PROFILE</h2>
-            <div>
-                <img src="./img/test.png" alt="自分のアイコン">
+            <div class="w_circle"></div>
+            <div class="b_circle"></div>
+            <div class="contents">
+                <img src="./img/profile.JPG" alt="自分のアイコン">
                 <div class="text_container">
-                    <p>自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。</p>
+                    <div class="about_btn"><p>about</p></div>
+                    <div class="skills_btn"><p>skills</p></div>
+                    <div class="about">
+                        <table>
+                            <tbody>
+                              <tr><th>名前</th><td>Kamimura</td></tr>
+                              <tr><th>大学</th><td>愛知工業大学<br>情報科学部<br>メディア情報専攻</td></tr>
+                              <tr><th>出身地</th><td>愛知県</td></tr>
+                              <tr><th>誕生日</th><td>2002/11/13</td></tr>
+                            </tbody>
+                          </table>
+                    </div>
+                    <div class="skills">
+                        <table>
+                            <tbody>
+                                <tr><th>資格</th><td>CGクリエイター検定<br>エキスパート</td></tr>
+                                <tr><th>経験</th><td>C, Java, JavaScript, HTML5, CSS, Maya, Illustrator,Photoshop</td></tr>
+                                <tr><th>受賞歴</th><td>CG-ARTS賞<br>(2021年後期)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
     
         <section id="works">
             <h2>WORKS</h2>
+            <div class="w_circle"></div>
+            <div class="b_circle"></div>
             <ul>
-                <li>
+                <li id="logo">
                     <div>
                         <a href="my_logo.html">MY LOGO</a>
                     </div>
                 </li>
-                <li>
+                <li id="poster">
                     <div>
                         <a href="poster_design.html">POSTER DESIGN</a>
                     </div>
                 </li>
-                <li>
+                <li id="sketch">
                     <div>
                         <a href="sketch_rendering.html">SKETCH/RENDERING</a>
                     </div>
                 </li>
-                <li>
+                <li id="anime">
                     <div>
                         <a href="2D_animation.html">2D ANIMATION</a>
                     </div>
                 </li>
-                <li>
+                <li id="CG">
                     <div>
                         <a href="3DCG.html">3DCG</a>
                     </div>
